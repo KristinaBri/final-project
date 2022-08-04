@@ -95,6 +95,7 @@ function randomColor () {
            randcol += allchar[Math.floor(Math.random() * 16)];
         };
        bobbles[i].style.backgroundColor = "#" + randcol;
+       bobbles[i].innerHTML = "#" + randcol;
        randcol = "";
     }
 };
