@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fc17974d23.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>FINAL ASSIGNMENT</title>
+
+</head>
+<body>
+    <nav>  
+        <ul>
+            <li><a href="#first-task">Toggle the figure</a></li>
+            <li><a href="#second-task">Play with the box</a></li>
+            <li><a href="#color-bobbles">Random colors</a></li>
+            <li><a href="#form-card">Form</a></li>
+        </ul>
+        
+        <div class="burger-menu">
+            <a href="#">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div> 
+    </nav>
+
+    <div class="container">
+
+        <div class="task-section">
+            <h1>UŽDUOTIS</h1>
+            <ol>
+                <li>Paspaudus ant mygtuko, puslapyje esantis div atsiranda/pranyksta
+                </li>
+                <li>Turit vieną div, su aukščiu,pločiu ir spalva bei 4 mygtukus, su kuriais galit valdyt sukurto div savybes: plotis, aukstis, centravimas ir pozicija
+                </li>
+                <li>Burgeris ir šoninis Meniu - paspaudus ant burgerio gražiai išvažiuoja šoninis meniu.
+                </li>
+                <li>Bent 4 div elementai, pradžioje visi juodos spalvos, paspaudus bent ant vieno iš jų, yra pakeičiamos spalvos visiems. Spalvos generuojamos random.
+                </li>
+                <li>Formoje pildoma "vardas", "pavardė" ir "gimimo data". Duomenys kaupiami lentelėje. Stulpeliai: Eil. Nr., Vardas, Pavardė, Amžius.
+                </li>
+            </ol>
+            <p>Visos užduotys turi būti stilizuotos, kad nebūtų sumaišytos. Kiekviena turi turėti savo section, headingus ir pan.</p>
+        </div>
+
+        <div class="first-task" id="first-task">
+            <a id="toggle-button" href="#toggle-button">Click Me!</a>
+            <div class="box"></div>
+        </div>
+
+        <div class="second-task" id="second-task">
+            <div class="change-box">
+                <a id="width-btn" href="#width-btn">Change width</a>
+                <a id="height-btn" href="#height-btn">Change height</a>
+                <a id="centering-btn" href="#centering-btn">Center</a>
+                <a id="position-btn" href="#position-btn">Change position</a>
+            </div>
+            <div class="moving-box"></div>
+        </div>
+
+        <div class="color-bobbles" id="color-bobbles">
+            <div id="bobble1" class="color" onclick="randomColor()"></div>
+            <div id="bobble2" class="color" onclick="randomColor()"></div>
+            <div id="bobble3" class="color" onclick="randomColor()"></div>
+            <div id="bobble4" class="color" onclick="randomColor()"></div>
+        </div>
+
+        <div class="form-card" id="form-card">
+            <form action="" method="">
+                <label for="fname">FIRST NAME</label>
+                <input type="text" name="fname" id="fname" value="">
+                <label for="lname">LAST NAME</label>
+                <input type="text" name="lname" id="lname" value="">
+                <label for="age">BIRTH YEAR</label>
+                <input type="text" name="birth" id="birth" value="">
+                <input type="button" name="button" id="btn" value="Add" onclick="displayDetails()">
+            </form>
+        </div>
+        <div>
+            <table id="show">
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                </tr>
+        </table>
+        </div>
+
+    </div>
+    
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
