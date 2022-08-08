@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/fc17974d23.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/df93d1e42d.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
@@ -14,12 +14,16 @@
 
 </head>
 <body>
-    <nav>  
-        <ul>
-            <li><a href="#first-task">Toggle the figure</a></li>
-            <li><a href="#second-task">Play with the box</a></li>
-            <li><a href="#color-bobbles">Random colors</a></li>
-            <li><a href="#form-card">Form</a></li>
+    <nav id="home">  
+        <div class="home">
+            <a href="#home">
+                <i class="fa-solid fa-house-user"></i>
+            </a>
+        </div>
+        <ul id="links">
+            <li><a href="#box-game" class="menu-link">Box game</a></li>
+            <li><a href="#color-bobbles" class="menu-link">Random colors</a></li>
+            <li><a href="#form-card" class="menu-link">Form</a></li>
         </ul>
         
         <div class="burger-menu">
@@ -48,17 +52,13 @@
             <p>Visos užduotys turi būti stilizuotos, kad nebūtų sumaišytos. Kiekviena turi turėti savo section, headingus ir pan.</p>
         </div>
 
-        <div class="first-task" id="first-task">
-            <a id="toggle-button" href="#toggle-button">Click Me!</a>
-            <div class="box"></div>
-        </div>
-
-        <div class="second-task" id="second-task">
+        <div class="box-game" id="box-game">
             <div class="change-box">
-                <a id="width-btn" href="#width-btn">Change width</a>
-                <a id="height-btn" href="#height-btn">Change height</a>
-                <a id="centering-btn" href="#centering-btn">Center</a>
-                <a id="position-btn" href="#position-btn">Change position</a>
+                <button id="on-off-btn" href="#on-off-btn">On / Off</button>
+                <button id="width-btn" href="#width-btn">Change width</button>
+                <button id="height-btn" href="#height-btn">Change height</button>
+                <button id="centering-btn" href="#centering-btn">Center</button>
+                <button id="position-btn" href="#position-btn">Change position</button>
             </div>
             <div class="moving-box"></div>
         </div>
@@ -72,13 +72,16 @@
 
         <div class="form-card" id="form-card">
             <form action="" method="">
-                <label for="fname">FIRST NAME</label>
-                <input type="text" name="fname" id="fname" value="">
-                <label for="lname">LAST NAME</label>
-                <input type="text" name="lname" id="lname" value="">
-                <label for="age">BIRTH YEAR</label>
-                <input type="text" name="birth" id="birth" value="">
-                <input type="button" name="button" id="btn" value="Add" onclick="displayDetails()">
+                <label for="fname"></label>
+                <input type="text" name="fname" id="fname" value="" placeholder="FIRST NAME">
+                <label for="lname"></label>
+                <input type="text" name="lname" id="lname" value="" placeholder="LAST NAME">
+                <label for="age"></label>
+                <input type="text" name="birth" id="birth" value="" placeholder="BIRTH YEAR">
+                <div class="form-buttons">
+                    <input type="button" name="button" id="btn" value="Add" onclick="displayDetails(), clearInput()" >
+                    <input type="button" name="clearTable" id="clearTable" value="Clear">
+                </div>
             </form>
         </div>
         <div>
@@ -89,14 +92,14 @@
                     <th>Last Name</th>
                     <th>Age</th>
                 </tr>
-        </table>
+            </table>
         </div>
 
     </div>
     
 
     
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
